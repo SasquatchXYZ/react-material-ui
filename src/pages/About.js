@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import Nav from '../components/Nav';
+import Paper from '../components/Paper';
 import Typography from '@material-ui/core/Typography';
 
 export default class About extends Component {
@@ -10,7 +11,9 @@ export default class About extends Component {
           linkTo="/"
           linkTitle="Back"
         />
-        <Typography variant="h4" color="primary">This is the About Page...</Typography>
+        <Paper>
+          <Typography variant="h4" color="primary">Meet the Team...</Typography>
+        </Paper>
       </div>
     )
   }
