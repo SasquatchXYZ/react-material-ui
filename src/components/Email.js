@@ -3,9 +3,13 @@ import PropTypes from 'prop-types';
 import {withStyles} from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
-import MenuItem from '@material-ui/core/MenuItem';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
+import Dialog from '@material-ui/core/Dialog';
+import DialogActions from '@material-ui/core/DialogActions';
+import DialogContent from '@material-ui/core/DialogContent';
+import DialogContentText from '@material-ui/core/DialogContentText';
+import DialogTitle from '@material-ui/core/DialogTitle';
 import Icon from '@material-ui/core/Icon'
 
 const styles = theme => ({
@@ -27,21 +31,41 @@ const styles = theme => ({
 
 class EmailForm extends Component {
   state = {
+    open: false,
+    message: false,
     email: ''
   };
 
+  handleClickOpen = () => {
+    this.setState({open: true})
+  };
+
+  handleClose = () => {
+    this.setState({
+      open: false,
+      message: false,
+      email: ''
+    })
+  };
+
   handleInputChange = event => {
+    console.log(event.target.value);
     this.setState({email: event.target.value})
   };
 
   handleFormSubmit = () => {
-
     const emailRX = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/i;
 
     if (emailRX.test(this.state.email)) {
-      console.log('Send to Database!')
+      console.log('Send to Database!');
+      this.setState({
+        open: false,
+        message: false,
+        email: ''
+      });
     } else {
-      console.log('That is not a valid Email...')
+      console.log('That is not a valid Email...');
+      this.setState({message: true})
     }
   };
 
@@ -58,36 +82,48 @@ class EmailForm extends Component {
               Standard license
             </Typography>*/}
           </Grid>
-          <form>
-            <Grid container direction="column" justify="center" alignItems="center">
-              <Grid item>
-                <TextField
-                  id="filled-email-input"
-                  label="Email"
-                  className={classes.textField}
-                  type="email"
-                  name="email"
-                  autoComplete="email"
-                  margin="normal"
-                  variant="filled"
-                  value={this.state.email}
-                  onChange={this.handleInputChange}
-                />
-              </Grid>
-              <Grid item>
-                <Button
-                  variant="contained"
-                  color="primary"
-                  className={classes.button}
-                  onClick={this.handleFormSubmit}
-                >
-                  Submit
-                  {/* This Button uses a Font Icon, see the installation instructions in the docs. */}
-                  <Icon className={classes.rightIcon}>send</Icon>
-                </Button>
-              </Grid>
-            </Grid>
-          </form>
+          <Grid item>
+            <Button variant="outlined" color="primary" onClick={this.handleClickOpen}>
+              Enter Email
+            </Button>
+          </Grid>
+          <Dialog
+            open={this.state.open}
+            onClose={this.handleClose}
+            aria-labelledby="form-dialog-title"
+          >
+            <DialogTitle id="form-dialog-title">Subscribe</DialogTitle>
+            <DialogContent>
+              <DialogContentText>
+                To get updates about Trek Tips, please enter your email address here. Your email will only be used to
+                send you occasion updates about the app.
+              </DialogContentText>
+              {!this.state.message
+                ? null
+                : <DialogContentText color="primary">
+                  Please Enter a valid Email.
+                </DialogContentText>
+              }
+              <TextField
+                autoFocus
+                margin="dense"
+                id="name"
+                label="Email Address"
+                type="email"
+                fullWidth
+                onChange={this.handleInputChange}
+                value={this.state.email}
+              />
+            </DialogContent>
+            <DialogActions>
+              <Button onClick={this.handleClose} color="primary">
+                Cancel
+              </Button>
+              <Button onClick={this.handleFormSubmit} color="primary">
+                Submit
+              </Button>
+            </DialogActions>
+          </Dialog>
         </Grid>
       </div>
     );
