@@ -1,9 +1,10 @@
 import React, {Component} from 'react';
 import Nav from '../components/Nav';
-import Meet from '../components/Meet';
-import FAQ from '../components/FAQ';
 import Paper from '../components/Paper';
+import Meet from '../components/Meet';
 import ImageCard from '../components/ImageCard';
+import FAQ from '../components/FAQ';
+import EmailForm from '../components/Email';
 import Typography from '@material-ui/core/Typography';
 import ThreeScreens from '../img/threelg.png';
 
@@ -25,6 +26,9 @@ export default class Home extends Component {
         <Paper>
           <Typography variant="h4" color="primary">Frequently Asked Questions</Typography>
           <FAQ/>
+        </Paper>
+        <Paper>
+          <EmailForm/>
         </Paper>
       </div>
     )
