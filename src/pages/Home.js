@@ -14,7 +14,7 @@ export default class Home extends Component {
       <div>
         <Nav
           linkTo="/about"
-          linkTitle="About"
+          linkTitle="The Team"
         />
         <Paper>
           <Meet/>
