@@ -67,9 +67,9 @@ function MeetTrekTips(props) {
             </ListItem>
             <ListItem>
               <ListItemIcon>
-                <DoneAll color="primary"/>
+                <Room color="primary"/>
               </ListItemIcon>
-              <ListItemText primary="Done All"/>
+              <ListItemText primary="Room Rounded"/>
             </ListItem>
             <ListItem>
               <ListItemIcon>
@@ -79,9 +79,9 @@ function MeetTrekTips(props) {
             </ListItem>
             <ListItem>
               <ListItemIcon>
-                <Room color="primary"/>
+                <DoneAll color="primary"/>
               </ListItemIcon>
-              <ListItemText primary="Room Rounded"/>
+              <ListItemText primary="Done All"/>
             </ListItem>
           </List>
         </Grid>

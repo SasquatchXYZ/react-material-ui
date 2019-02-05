@@ -28,7 +28,12 @@ export default class Home extends Component {
           image={ThreeScreens}
         />
         <Paper>
-          <Typography variant="h4" color="primary">Frequently Asked Questions</Typography>
+          <Typography
+            variant="h4"
+            color="primary"
+          >
+            Frequently Asked Questions
+          </Typography>
           <FAQ/>
         </Paper>
         <Paper>

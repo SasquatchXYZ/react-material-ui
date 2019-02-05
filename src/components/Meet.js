@@ -29,6 +29,7 @@ const styles = theme => ({
   },
   text: {
     margin: theme.spacing.unit * 2,
+    fontWeight: 400
   },
   image: {
     width: 400,
@@ -51,8 +52,11 @@ function MeetTrekTips(props) {
           <Typography variant="h4" color="primary">
             Meet Trek Tips...
           </Typography>
-          <Typography className={classes.text} variant="body1">
-            Standard license
+          <Typography className={classes.text} variant="h6">
+            Trek Tips is a travel application aiming to provide users with the best travel experience possible by providing customized, user-specific recommendations for all your needs in a new or unfamiliar location.
+          </Typography>
+          <Typography className={classes.text} variant="h6">
+            Whether is is restaurants, museums, nightclubs, or a relaxing day at the spa... You get to select your preferences and Trek Tips will suggest things unique to you, wherever you are!
           </Typography>
           {/*<List>
             <ListItem>
