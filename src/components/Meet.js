@@ -3,6 +3,18 @@ import PropTypes from 'prop-types';
 import {withStyles} from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
+
+import List from '@material-ui/core/List';
+import ListItem from '@material-ui/core/ListItem';
+import ListItemIcon from '@material-ui/core/ListItemIcon';
+import ListItemText from '@material-ui/core/ListItemText';
+import Divider from '@material-ui/core/Divider';
+import FlightTakeoff from '@material-ui/icons/FlightTakeoff';
+import Commute from '@material-ui/icons/CommuteOutlined';
+import DoneAll from '@material-ui/icons/DoneAll';
+import TurnedIn from '@material-ui/icons/TurnedIn';
+import Room from '@material-ui/icons/RoomRounded';
+
 import IntroPic from '../img/dual.png';
 
 console.log(IntroPic);
@@ -39,9 +51,41 @@ function ComplexGrid(props) {
           <Typography variant="h4" color="primary">
             Meet Trek Tips...
           </Typography>
-          <Typography gutterBottom variant="subtitle1">
+          {/*<Typography gutterBottom variant="subtitle1">
             Standard license
-          </Typography>
+          </Typography>*/}
+          <List>
+            <ListItem>
+              <ListItemIcon>
+                <FlightTakeoff color="primary"/>
+              </ListItemIcon>
+              <ListItemText primary="Flight Takeoff"/>
+            </ListItem>
+            <ListItem>
+              <ListItemIcon>
+                <Commute color="primary"/>
+              </ListItemIcon>
+              <ListItemText primary="Commute Outlined"/>
+            </ListItem>
+            <ListItem>
+              <ListItemIcon>
+                <DoneAll color="primary"/>
+              </ListItemIcon>
+              <ListItemText primary="Done All"/>
+            </ListItem>
+            <ListItem>
+              <ListItemIcon>
+                <TurnedIn color="primary"/>
+              </ListItemIcon>
+              <ListItemText primary="Turned In"/>
+            </ListItem>
+            <ListItem>
+              <ListItemIcon>
+                <Room color="primary"/>
+              </ListItemIcon>
+              <ListItemText primary="Room Rounded"/>
+            </ListItem>
+          </List>
         </Grid>
         <Grid item className={classes.image}>
           <img className={classes.img} alt="complex" src={IntroPic}/>
