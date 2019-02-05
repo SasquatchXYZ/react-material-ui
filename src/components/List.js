@@ -2,20 +2,20 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {withStyles} from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
-import Typography from '@material-ui/core/Typography';
+// import Typography from '@material-ui/core/Typography';
 
-/*import List from '@material-ui/core/List';
+import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
-import Divider from '@material-ui/core/Divider';
+// import Divider from '@material-ui/core/Divider';
 import FlightTakeoff from '@material-ui/icons/FlightTakeoff';
 import Commute from '@material-ui/icons/CommuteOutlined';
 import DoneAll from '@material-ui/icons/DoneAll';
 import TurnedIn from '@material-ui/icons/TurnedIn';
-import Room from '@material-ui/icons/RoomRounded';*/
+import Room from '@material-ui/icons/RoomRounded';
 
-import IntroPic from '../img/pixel.png';
+import InfoPic from '../img/dualpref.png';
 
 const styles = theme => ({
   root: {
@@ -29,7 +29,7 @@ const styles = theme => ({
   },
   text: {},
   image: {
-    width: 400,
+    width: 425,
     height: 499,
   },
   img: {
@@ -46,13 +46,13 @@ function MeetTrekTips(props) {
     <div className={classes.root}>
       <Grid container spacing={16}>
         <Grid item xs={12} sm container className={classes.text} direction="column">
-          <Typography variant="h4" color="primary">
+          {/*<Typography variant="h4" color="primary">
             Meet Trek Tips...
-          </Typography>
+          </Typography>*/}
           {/*<Typography gutterBottom variant="subtitle1">
             Standard license
           </Typography>*/}
-          {/*<List>
+          <List>
             <ListItem>
               <ListItemIcon>
                 <FlightTakeoff color="primary"/>
@@ -83,10 +83,10 @@ function MeetTrekTips(props) {
               </ListItemIcon>
               <ListItemText primary="Room Rounded"/>
             </ListItem>
-          </List>*/}
+          </List>
         </Grid>
         <Grid item className={classes.image}>
-          <img className={classes.img} alt="complex" src={IntroPic}/>
+          <img className={classes.img} alt="complex" src={InfoPic}/>
         </Grid>
       </Grid>
     </div>
