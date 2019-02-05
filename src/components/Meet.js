@@ -27,7 +27,9 @@ const styles = theme => ({
     margin: 'auto',
     maxWidth: 500,
   },
-  text: {},
+  text: {
+    margin: theme.spacing.unit * 2,
+  },
   image: {
     width: 400,
     height: 499,
@@ -45,13 +47,13 @@ function MeetTrekTips(props) {
   return (
     <div className={classes.root}>
       <Grid container spacing={16}>
-        <Grid item xs={12} sm container className={classes.text} direction="column">
+        <Grid item xs={12} sm container direction="column">
           <Typography variant="h4" color="primary">
             Meet Trek Tips...
           </Typography>
-          {/*<Typography gutterBottom variant="subtitle1">
+          <Typography className={classes.text} variant="body1">
             Standard license
-          </Typography>*/}
+          </Typography>
           {/*<List>
             <ListItem>
               <ListItemIcon>
