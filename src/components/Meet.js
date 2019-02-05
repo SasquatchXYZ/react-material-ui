@@ -2,9 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {withStyles} from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
-import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
-import ButtonBase from '@material-ui/core/ButtonBase';
 import IntroPic from '../img/dual.png';
 
 console.log(IntroPic);
@@ -19,9 +17,7 @@ const styles = theme => ({
     margin: 'auto',
     maxWidth: 500,
   },
-  text: {
-
-  },
+  text: {},
   image: {
     width: 425,
     height: 499,

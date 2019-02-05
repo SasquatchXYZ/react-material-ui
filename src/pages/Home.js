@@ -3,7 +3,9 @@ import Nav from '../components/Nav';
 import Meet from '../components/Meet';
 import FAQ from '../components/FAQ';
 import Paper from '../components/Paper';
+import ImageCard from '../components/ImageCard';
 import Typography from '@material-ui/core/Typography';
+import ThreeScreens from '../img/threelg.png';
 
 export default class Home extends Component {
 
@@ -17,13 +19,13 @@ export default class Home extends Component {
         <Paper>
           <Meet/>
         </Paper>
+        <ImageCard
+          image={ThreeScreens}
+        />
         <Paper>
           <Typography variant="h4" color="primary">Frequently Asked Questions</Typography>
           <FAQ/>
         </Paper>
-        <Typography variant="h4" color="primary">Frequently Asked Questions</Typography>
-        <FAQ/>
-
       </div>
     )
   }
