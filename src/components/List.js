@@ -10,7 +10,7 @@ import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 // import Divider from '@material-ui/core/Divider';
 import FlightTakeoff from '@material-ui/icons/FlightTakeoff';
-import Commute from '@material-ui/icons/CommuteOutlined';
+import Settings from '@material-ui/icons/Settings';
 import DoneAll from '@material-ui/icons/DoneAll';
 import TurnedIn from '@material-ui/icons/TurnedIn';
 import Room from '@material-ui/icons/RoomRounded';
@@ -53,35 +53,50 @@ function MeetTrekTips(props) {
             Standard license
           </Typography>*/}
           <List>
-            <ListItem>
+            <ListItem alignItems="flex-start">
               <ListItemIcon>
                 <FlightTakeoff color="primary"/>
               </ListItemIcon>
-              <ListItemText primary="Flight Takeoff"/>
+              <ListItemText
+                primary="Travel Smarter"
+                secondary="Plan out activities for your next journey; you'll never arrive without knowing what awaits you at your destination."
+              />
             </ListItem>
-            <ListItem>
+            <ListItem alignItems="flex-start">
               <ListItemIcon>
-                <Commute color="primary"/>
+                <Settings color="primary"/>
               </ListItemIcon>
-              <ListItemText primary="Commute Outlined"/>
+              <ListItemText
+                primary="All-About-You"
+                secondary="Set and update your preferences to reflect your unique personality, and receive recommendations based off these preferences as well as your past selections."
+              />
             </ListItem>
-            <ListItem>
+            <ListItem alignItems="flex-start">
               <ListItemIcon>
                 <Room color="primary"/>
               </ListItemIcon>
-              <ListItemText primary="Room Rounded"/>
+              <ListItemText
+                primary="Location Based"
+                secondary="Search where you are, or where you will be going, to get a recommendations based on your own "
+              />
             </ListItem>
-            <ListItem>
+            <ListItem alignItems="flex-start">
               <ListItemIcon>
                 <TurnedIn color="primary"/>
               </ListItemIcon>
-              <ListItemText primary="Turned In"/>
+              <ListItemText
+                primary="Bookmark Recommendations"
+                secondary="We know you never have enough time to do all the things you want to do while travelling, so keep track of the memorable ones."
+              />
             </ListItem>
-            <ListItem>
+            <ListItem alignItems="flex-start">
               <ListItemIcon>
                 <DoneAll color="primary"/>
               </ListItemIcon>
-              <ListItemText primary="Done All"/>
+              <ListItemText
+                primary="Completed"
+                secondary="Check off selections on your list as you complete them.  (Don't worry, they'll still stay saved in case you forget the name of that restaurant in Brisbane...)"
+              />
             </ListItem>
           </List>
         </Grid>
