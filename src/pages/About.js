@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import Nav from '../components/Nav';
 import Paper from '../components/Paper';
 import Typography from '@material-ui/core/Typography';
-import TeamCard from '../components/TeamCard';
+import TeamCard from '../components/TeamLayout';
 
 export default class About extends Component {
   render() {
